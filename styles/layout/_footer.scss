@@ -1,0 +1,18 @@
+#footer{
+    .footer-container{
+     border-bottom: 0.5px solid $fifth-color;
+     margin: 40px 0 40px 0;
+    }
+    .footer-menu{
+        display:flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-bottom:25px;
+    }
+    .footer-item{
+        color:$second-color;
+        font-family: $main-font;
+        font-size:14px;
+        font-weight: bold;
+    }
+}
