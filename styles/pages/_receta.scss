@@ -59,7 +59,7 @@ body {
                 flex-direction: row;
                 justify-content: space-between;
                 padding-left: 75px;
-                color: $main-color;
+                color: $second-color;
                 font-family: $main-font;
     
                 .pie-icons {
@@ -89,23 +89,23 @@ body {
                 padding-left: 90px;
  
                 h2 {
-                    color: $fourth-color;
+                    color: $forth-color;
                     padding-left: 15px;
                 }
                 p {
-                    color: $main-color;  
+                    color: $second-color;  
                     margin: 0px 0px 30px 1px;          
                 }
                 blockquote {
-                    border-left: 1px solid $secondary-color;
+                    border-left: 1px solid $main-color;
                     padding-left: 25px;
                     margin: 0;
                     p {
-                     color: $fourth-color;  
+                     color: $forth-color;  
                      margin-left: 15px;                                           
                     }
                     span {
-                        color: $main-color;
+                        color: $second-color;
                     }
                     @media (max-width: $mobile-width) {
                         padding-left: 15px;
@@ -115,10 +115,10 @@ body {
                     padding: 0;
                     margin-left: 30px;
                     li {
-                        color: $secondary-color;
+                        color: $main-color;
                         margin: 15px;
                         span {
-                            color: $main-color;
+                            color: $second-color;
                         }
                     }
                     @media (max-width: $mobile-width) {

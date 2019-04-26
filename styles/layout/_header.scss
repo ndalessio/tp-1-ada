@@ -6,8 +6,8 @@ header {
     }
 
     h1 {
-        color: $secondary-color;
-        font-family: $secondary-font;
+        color: $main-color;
+        font-family: $title-font;
         font-size: 50px;
         text-align: center;
         margin: 20px 0 25px 0;
@@ -18,4 +18,5 @@ header {
             font-size: 80px;
         }
     } 
+    
 }
