@@ -1,0 +1,21 @@
+
+header {
+    width: 50%;
+    @media (max-width: $mobile-width){
+        width: 70%;
+    }
+
+    h1 {
+        color: $secondary-color;
+        font-family: $secondary-font;
+        font-size: 50px;
+        text-align: center;
+        margin: 20px 0 25px 0;
+        @media (max-width: 1000px){
+            font-size: 60px;
+        }
+        @media (max-width: $mobile-width){
+            font-size: 80px;
+        }
+    } 
+}

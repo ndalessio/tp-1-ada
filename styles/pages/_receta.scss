@@ -1,0 +1,140 @@
+
+body {
+    margin: 0;
+}
+
+#receta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+
+    main {
+        width: 70%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        @media (max-width: $mobile-width){
+            width: 85%;               
+        }
+
+        a:link {
+            text-decoration: none;
+            color: none;
+        }
+
+        .receta-completa {
+            width: 100%;
+            padding: 50px 10px;
+            @media (max-width: $mobile-width){
+                padding: 20px 10px;               
+            }
+
+            .img-icons {
+                display: flex;
+                justify-content: center;
+                @media (max-width: $mobile-width){
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .img-container {   
+                    img {
+                        border-radius: 10%;
+                        width: 600px;
+                        height: auto;  
+                        @media (max-width: $mobile-width){
+                            border-radius: 15%;
+                            width: 90%;
+                            height: 50%;
+                        }
+                    } 
+                    @media (max-width: $mobile-width) {
+                        display: flex;
+                        justify-content: center;
+                    }    
+                }
+            }
+            .pie-img {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-left: 75px;
+                color: $main-color;
+                font-family: $main-font;
+    
+                .pie-icons {
+                    display: flex;
+                    align-items: center;
+                    font-family: $main-font;
+                    i {
+                      padding: 10px;
+                      span {
+                        font-family: $main-font;
+                      }
+                     
+                    }
+                }
+                @media (max-width: $mobile-width){
+                    justify-content: space-around;
+                    font-size: 16px;
+                    padding-left: 0; 
+                }
+            }
+            .receta {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 600px;
+                font-family: $main-font;
+                padding-left: 90px;
+ 
+                h2 {
+                    color: $fourth-color;
+                    padding-left: 15px;
+                }
+                p {
+                    color: $main-color;  
+                    margin: 0px 0px 30px 1px;          
+                }
+                blockquote {
+                    border-left: 1px solid $secondary-color;
+                    padding-left: 25px;
+                    margin: 0;
+                    p {
+                     color: $fourth-color;  
+                     margin-left: 15px;                                           
+                    }
+                    span {
+                        color: $main-color;
+                    }
+                    @media (max-width: $mobile-width) {
+                        padding-left: 15px;
+                    }
+                }
+                ul {
+                    padding: 0;
+                    margin-left: 30px;
+                    li {
+                        color: $secondary-color;
+                        margin: 15px;
+                        span {
+                            color: $main-color;
+                        }
+                    }
+                    @media (max-width: $mobile-width) {
+                        margin-left: 5px;
+                    }
+                }
+                @media (max-width: $mobile-width) {
+                    font-size: 18px;
+                    max-width: 500px;
+                }
+                @media (max-width: 650px){
+                    max-width: 400px;
+                    padding-left: 40px;
+                    box-sizing: border-box;
+                }
+            }
+        }        
+    }        
+}

@@ -1,0 +1,30 @@
+
+.banner {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+    p {
+        font-family: $main-font;
+        padding-left: 150px;
+        padding-top: 15px;
+        margin: 0;
+        i {
+            padding: 10px;
+        }
+        span {
+            color: $main-color;
+            padding-left: 10px;
+            @media (max-width: $mobile-width) {
+                display: flex;
+                padding-top: 15px;
+            }
+        }
+        @media (max-width: $mobile-width){
+            padding-left: 25px;
+            padding-top: 20px;
+            font-size: 24px;
+        }
+    }
+}
