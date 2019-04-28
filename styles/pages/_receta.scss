@@ -70,8 +70,7 @@ body {
                       padding: 10px;
                       span {
                         font-family: $main-font;
-                      }
-                     
+                      }  
                     }
                 }
                 @media (max-width: $mobile-width){
@@ -80,6 +79,7 @@ body {
                     padding-left: 0; 
                 }
             }
+            
             .receta {
                 display: flex;
                 flex-direction: column;
