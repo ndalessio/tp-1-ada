@@ -1,8 +1,16 @@
-#home{
+/*
+1. Main: Carrusel
+2. Sections: Platos, Recetas, Exóticos
+3. Video
+4. Aside
+5. Recetas
+*/
 
-    /*==============================================
-    ===================MAIN=========================
-    ==============================================*/
+
+#home{
+    /*========================================================
+    ===================Main: Carrusel=========================
+    ==========================================================*/
 
     .page-container{
         display: flex;
@@ -25,60 +33,10 @@
     }
     
     column {
-        width: 85%;
+        width: 80%;
         display:flex;
         flex-direction: column;
     }
-    
-    /*===================================================
-    ======================SECTIONS=======================
-    ====================================================*/
-
-    .sections{
-        display: flex;
-        width:95%;
-        justify-content: space-between;
-        margin: 20px auto;
-    }
-    
-    .container-sections-img{
-        display: flex;
-        flex-basis: 280px;
-        flex-grow: 1;
-        position: relative;
-
-        &:hover .title-section-recipe{
-            opacity:1;
-            cursor:pointer;
-        }
-    }
-    
-    .images-sections{
-        width: 95%;
-        max-width: 350px;
-        height: 200px;
-        border-radius: 15%;
-        margin: 10px;
-    }
-
-    .title-section-recipe{
-        width: 44%;
-        height:40px;
-        background-color: $main-color;
-        color: $forth-color;
-        font-family: $main-font;
-        font-size:16px;
-        font-weight: bold;
-        text-align: center;
-        line-height:45px;
-        border-radius: 15px;
-        position:absolute;
-        bottom: 99px;
-        left: 99px;
-        opacity:0;  
-        transition: 0.2s;
-    }
-    /*=============MAIN HOVER=====================*/
 
     .img-container-main-1, .img-container-main-2, .img-container-main-3, .img-container-main-4{
         width: 100%;
@@ -109,11 +67,21 @@
             cursor: pointer;
         }
     }
-
     .img-container-main-2,  .img-container-main-3{
-        margin-left: 20px;
+        @media (max-width: $mobile-width){
+            display: none;
+        }
     }
+    .img-container-main-4{
+        @media (max-width: $mobile-width){
+            display: none;
+        }
+    }
+    .img-container-main-2{
+        margin-left: 20px;
+        margin-right: 20px;
 
+    }
     .img-container-main-3{
         margin-right: 20px;
 
@@ -123,7 +91,7 @@
         flex-basis: 30%;
         height: 590px;
     }
-    
+
     .effect{
         width: 100%;
         height: 140px;
@@ -132,7 +100,10 @@
         background-color: $main-color;
         position: absolute;
         opacity: 0;
-        transition: 0.2s;
+        transition: 0.7s;
+        @media (max-width: $mobile-width){
+            height:0px;
+        }
     }
 
     .info-1-main, .info-2-main{
@@ -140,7 +111,11 @@
         font-family: $main-font;
         position: absolute;
         opacity: 0;
-        transition: 0.2s;
+        transition: 0.7s;
+        @media (max-width: $mobile-width){
+            display:none;
+        }
+        
     }
     .info-1-main{
         bottom:0px;
@@ -148,9 +123,80 @@
     .info-2-main{
         bottom:0px;
     }
-    /*================================================
-    ======================VIDEO=======================
-    ================================================*/
+    
+    /*===========================================================
+    ===========Sections: Platos, Recetas, Exóticos=================
+    =============================================================*/
+
+    .sections{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+        @media (max-width: $mobile-width-2){
+            flex-direction: column;
+        }
+        @media (max-width: $mobile-width){
+            flex-direction: column;
+        }
+    }
+    
+    .container-sections-img-1, .container-sections-img-2, .container-sections-img-3 {
+        display: flex;
+        flex-basis: 280px;
+        flex-grow: 1;
+        position: relative;
+
+        &:hover .title-section-recipe{
+            opacity:1;
+            cursor:pointer;
+        }
+    }
+    .container-sections-img-1, .container-sections-img-2{
+        @media (max-width: $mobile-width){
+            height: 300px;
+            flex-basis:220px;
+        }
+    }
+
+    .container-sections-img-3{
+        @media (max-width: $mobile-width){
+            display: none;
+        }
+    }
+
+    .images-sections{
+        width: 95%;
+        max-width: 350px;
+        height: 200px;
+        border-radius: 15%;
+        margin: 10px;
+    }
+
+    .title-section-recipe{
+        width: 44%;
+        height:40px;
+        background-color: $main-color;
+        color: $forth-color;
+        font-family: $main-font;
+        font-size:16px;
+        font-weight: bold;
+        text-align: center;
+        line-height:45px;
+        border-radius: 15px;
+        position:absolute;
+        bottom: 99px;
+        left: 29%;
+        opacity:0;  
+        transition: 0.5s;
+        @media (max-width: $mobile-width-2){
+            bottom: 88px;
+            left:80px;
+        }
+    }
+    
+    /*=====================================================
+    ======================3.Video============================
+    =======================================================*/
     .video-aside-container{
         display:flex;
         margin: 30px 0px 30px 0px;
@@ -161,6 +207,9 @@
         height:500px;
         display:flex;
         flex-grow: 1;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
     }
     .video{
         width:100%;
@@ -171,6 +220,9 @@
         flex-direction: column;
         justify-content: flex-start;
         width: 60%;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
     }
 
     .video-epigraph{
@@ -179,20 +231,21 @@
         font-size: 16px;
         margin-top: 10px;
     }
-    /*================================================
-    ==================4.ASIDE=========================
-    =================================================*/
+    /*==================================================
+    ==================4.Aside===========================
+    ====================================================*/
     
     aside{
-        width:20%;
+        width:30%;
         height:500px;
         display:flex;
         flex-direction:column;
-        flex-grow: 1;
         justify-content: space-between;
         align-items:center;
         margin: 0 40px;
-
+        @media (max-width: $mobile-width-2){
+            width: 100%;
+        }
     }
 
     .border-aside-top, .border-aside-bottom{
@@ -232,7 +285,6 @@
     }
 
     .description-aside{
-        width:80%;
         color:$forth-color;
         font-family: $main-font;
         font-weight: bold;
@@ -240,9 +292,9 @@
         padding-left:5px;
     }
 
-     /*================================================
-    =====================3.RECETAS====================
-    ================================================*/
+     /*===================================================
+    =====================5.Recetas========================
+    =====================================================*/
     .recepies-container{
         display:flex;
         flex-grow:2;
@@ -255,15 +307,34 @@
         width:60%;
         flex-basis: 500px;
         border-top: 0.5px solid $fifth-color;
+
+        a{
+            color:$forth-color;
+            font-family: $main-font;
+        }
+
+        @media (max-width: $mobile-width){
+            width: 100%;
+        }
+
+        @media (max-width: $mobile-width-2){
+            border-top: 0px;
+            margin: 0 auto;
+        }
     }
     
-    .recipe-content{
+    .recipe-content-1, .recipe-content-2{
         display:flex;
         flex-direction: column;
         margin:20px;
 
         button{
             margin:15px;
+        }
+    }
+    .recipe-content-2{
+        @media (max-width: $mobile-width-2){
+            display:none;
         }
     }
     
@@ -289,7 +360,9 @@
         height: 150px;
         border-radius: 15%;
         margin: 30px 20px 20px 0px;
-        
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
     }
     
     .images-recipes-2{
@@ -297,6 +370,9 @@
         height: 154px;
         border-radius: 15%;
         margin: 30px 20px 20px 2px;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
     }
 
  }

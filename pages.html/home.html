@@ -12,38 +12,40 @@
 </head>
 
 <body>
-        <div id="header">
-                <div class="page-container">
-                    <div class="main-container">
-                        <banner>
-                            <h1 class="title">Mi blog de cocina</h1>
-                        </banner>
-                        <nav>
-                            <ul class="menu">
-                                <li class="menu-item">HOME</li>
-                                <li class="menu-item">PLATOS<i class="fas fa-sort-down"></i>
-                                    <ul class="submenu">
-                                        <li class="subitem">
-                                            <a href="#receta-completa" class="link">Ensalada</a>
-                                        </li>
-                                        <li class="subitem">Carne</li>
-                                        <li class="subitem">Helados</li>
+    <header>
+        <div class="page-container">
+            <div class="main-container">
+                <h1>Mi Blog de Cocina</h1>
+                <nav>
+                    <ul class="menu">
+                        <li class="titulo-desplegable"><i class="fas fa-bars"></i><span>MENU</span>
+                            <ul class="links-principales">
+                                <li class="links"><a href="../home.html">HOME</a></li>
+                                <li class="links"><a href="#">PLATOS<i class="fas fa-sort-down"></i></a>
+                                     <!--Acá arriba va link receta-->
+                                    <ul class="submenu-container">
+                                        <li class="sub-links">Ensalada</li>
+                                        <li class="sub-links">Carne</li>
+                                        <li class="sub-links">Helado</li>
                                     </ul>
                                 </li>
-                                <li class="menu-item">SOBRE MÍ</li>
-                                <li class="menu-item">CONTACTO</li>
+                                <li class="links"><a href="#">SOBRE MI</a></li>
+                                <li class="links"><a href="#">CONTACTOS</a></li>
                             </ul>
-                        </nav>
-                        <p>Menú</p>
-                    </div>
-                </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+        </div>
+    </header>
     <div id="home">
         <div class="page-container">
             <div class="main-container">
                 <div class="main">
+                    <!----------------------1. Main: Carrusel-------------------------------->
                     <div class="img-container-main-1">
-                        <img class="main-img" src="../img/img-1.jpg">
+                        <a href="#"><img class="main-img" src="../img/img-1.jpg"></a>
+                        <!--#Acá arriba va link receta-->
                         <div class="effect"></div>
                         <div class="info-1-main">21 de Abril, 2019</div>
                         <div class="info-2-main">Aprendé a hacer los mejores tacos!</div>
@@ -69,24 +71,23 @@
                 </div>
             </div>
             <column>
+                <!----------------2. Sections: Platos, Recetas, Exóticos---------------------->
                 <div class="sections">
-                    <div class="container-sections-img">
+                    <div class="container-sections-img-1">
                         <img class="images-sections" src="../img/platos.jpeg" alt>
                         <div class="title-section-recipe">Platos</div>
                     </div>
-                    <div class="container-sections-img">
+                    <div class="container-sections-img-2">
                         <img class="images-sections" src="../img/recetas.JPG" alt>
                         <div class="title-section-recipe">Recetas</div>
                     </div>
-                    <div class="container-sections-img">
+                    <div class="container-sections-img-3">
                         <img class="images-sections" src="../img/exoticos.JPG" alt>
                         <div class="title-section-recipe">Exóticos</div>
                     </div>
                 </div>
 
-                <!--====================================================
-                            ====================RECETAS=============================
-                            =====================================================-->
+                <!----------------------------------3. Video----------------------------------------->
                 <div class="recipes-container">
                     <div class="video-aside-container">
                         <div class="video-epigraph-container">
@@ -99,6 +100,7 @@
                             </div>
                             <div class="video-epigraph">Cómo preparar una riquísima torta de galletitas</div>
                         </div>
+                        <!--------------------------------4. Aside-------------------------------------->
                         <aside>
                             <div class="border-aside-top">
                                 <div class="border-aside-content">Sobre mí</div>
@@ -112,46 +114,57 @@
                             </div>
                         </aside>
                     </div>
+                    <!--------------------------------5. Recetas -------------------------------------->
+
                     <div class="recipe-container">
                         <img class="images-recipes-1" src="../img/nota1.JPG">
-                        <div class="recipe-content">
-                            <h2 class="authors-recipe">By Clara y Noelí | Abril 14, 2019 <i
-                                    class="far fa-heart"><span></span><span class="authors-recipe">45</span>
-                                </i><i class="fas fa-share-alt"><span class="authors-recipe"> 22 </span></i></h2>
+                        <div class="recipe-content-1">
+                            
+                            <h2 class="authors-recipe">By Clara y Noelí | Abril 14, 2019 
+                                <a href="#"><i class="far fa-heart"></i></a>
+                                <span class="authors-recipe">45</span>
+                                <a href="#"><i class="fas fa-share-alt"></i></a>
+                                <span class="authors-recipe"> 22 </span>
+                            </h2>
                             <h1 class="title-recipe">Delicias dulces</h1>
                             <h2 class="description-recipe">En este artículo encontrarán una receta rica, sana y muy
                                 fácil de hacer!
                             </h2>
-                            <button>Leer más</button>
+                            <button><a href="#">Leer más</a></button>
                         </div>
                     </div>
                     <div class="recipe-container">
                         <img class="images-recipes-2" src="../img/nota2.JPG">
-                        <div class="recipe-content">
-                                <h2 class="authors-recipe">By Clara y Noelí | Febrero 4, 2019 <i
-                                        class="far fa-heart"><span></span><span class="authors-recipe">45</span>
-                                    </i><i class="fas fa-share-alt"><span class="authors-recipe"> 22 </span></i></h2>
-                                <h1 class="title-recipe">Comidas simples</h1>
-                                <h2 class="description-recipe">En este artículo encontrarán una receta rica, sana y muy
-                                    fácil de hacer!
-                                </h2>
-                                <button>Leer más</button>
+                        <div class="recipe-content-2">
+                            <h2 class="authors-recipe">By Clara y Noelí | Febrero 4, 2019
+                                    <a href="#"><i class="far fa-heart"></i></a>
+                                    <span class="authors-recipe">45</span>
+                                    <a href="#"><i class="fas fa-share-alt"></i></a>
+                                    <span class="authors-recipe"> 22 </span>
+                            </h2>
+                            <h1 class="title-recipe">Comidas simples</h1>
+                            <h2 class="description-recipe">En este artículo encontrarán una receta rica, sana y muy
+                                fácil de hacer!
+                            </h2>
+                            <button><a href="#">Leer más</a></button>
                         </div>
                     </div>
                 </div>
-                <div id="footer">
-                        <div class="footer-container">
-                            <ul class="footer-menu">
-                                <li class="footer-item"><i class="fab fa-facebook-f"></i> FACEBOOK</li>
-                                <li class="footer-item"><i class="fab fa-twitter"></i> TWITTER</li>
-                                <li class="footer-item"><i class="fab fa-google-plus-g"></i> GOOGLE+</li>
-                                <li class="footer-item"><i class="fab fa-linkedin"></i> LIKEDIN</li>
-                                <li class="footer-item"><i class="fab fa-instagram"></i> INSTAGRAM</li>
-                                <li class="footer-item"><i class="fab fa-youtube"></i> YOUTUBE</li>
-                            </ul>
-                        </div>
-                    </div>
+
             </column>
+            <footer>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i><span>FACEBOOK</span></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i><span>TWITTER</span></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i><span>GOOGLE+</span></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i><span>LINKEDIN</span></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i><span>INSTAGRAM</span></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i><span>YOUTUBE</span></a></li>
+                </ul>
+                <div class="flecha-footer">
+                    <a href="receta.html#receta-container"><i class="fas fa-arrow-circle-up"></i></a>
+                </div>
+            </footer>
         </div>
     </div>
 </body>

@@ -1,108 +1,20 @@
-#header{
-    .page-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+header {
+    width: 50%;
+    @media (max-width: $mobile-width){
+        width: 70%;
     }
-    
-    .main-container{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-
-        p{
-            visibility:hidden;
-            @media (max-width: 350px){
-                visibility: visible;
-                width: 270px;
-                background-color:$main-color;
-                color:$sixth-color;
-                font-family: 
-                border-radius:13px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 25px;
-                margin: 5px;
-            }
-        }
-    }
-    
-    .banner{
-        display: flex;
-    }
-    
-    .title{
-        font-size: $title-font-size;
+    h1 {
+        color: $main-color;
         font-family: $title-font;
-        color:$main-color;
-        margin-bottom: 10px;
-        @media (max-width: 350px){
-            font-size:40px;
+        font-size: 50px;
+        text-align: center;
+        margin: 20px 0 25px 0;
+        @media (max-width: 1000px){
+            font-size: 60px;
         }
-    }
-    
-    nav{
-        width: 100%;
-        align-items: center;
-        margin:15px;
-        @media (max-width: 350px){
-            display:none;
+        @media (max-width: $mobile-width){
+            font-size: 80px;
         }
-    }
-    
-    .menu{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        list-style-type: none;
-        margin: 0 200px 0 200px;
-        padding: 0px;
-        position:relative;
-        @media (max-width: 350px){
-            display:none;
-        }
-    }
-    
-    .menu-item{
-        font-size: $main-font-size;
-        font-family: $main-font;
-        color: $second-color;
-        font-weight: bold;
-        margin: 0 20px 10px 20px;
-        
-        &:hover {
-            color: $main-color;
-            cursor: pointer;
-        }
-        &:hover .submenu{
-            visibility: visible;
-        }
+    } 
 
-    }
-    .submenu{
-        list-style: none;
-        padding: 0;
-        display: inline-block;
-        opacity:0.3;
-        position:absolute; 
-        left: 80px;
-        visibility: hidden;
-        background-color: $fifth-color;
-    }
-
-    .subitem{
-        list-style:none;
-        margin:15px;
-        color: $second-color;
-
-        &:hover{
-            color:$main-color;
-            cursor:pointer;
-        }
-    }
-
-    .link{
-        text-decoration: none;
-    }
 }
