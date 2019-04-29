@@ -1,3 +1,7 @@
+/*  MAIN:
+1. IMAGEN RECETA
+2. RECETA
+*/
 
 body {
     margin: 0;
@@ -7,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;   
-
+/*--------------------------- MAIN ------------------------------*/
     main {
         width: 70%;
         max-width: 700px;
@@ -29,7 +33,8 @@ body {
             @media (max-width: $mobile-width){
                 padding: 20px 10px;               
             }
-
+            
+           /*--------------------------- 1. IMAGEN RECETA ------------------------------*/
             .img-icons {
                 display: flex;
                 justify-content: center;
@@ -79,7 +84,7 @@ body {
                     padding-left: 0; 
                 }
             }
-            
+            /*--------------------------- 2. RECETA ------------------------------*/
             .receta {
                 display: flex;
                 flex-direction: column;

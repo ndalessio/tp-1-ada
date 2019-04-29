@@ -1,0 +1,412 @@
+/*
+1. Main: Carrusel
+2. Sections: Platos, Recetas, Exóticos
+3. Video
+4. Aside
+5. Recetas
+*/
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    h1 {
+        font-size: 50px;
+        @media (max-width: $mobile-width){
+            font-size: 50px;
+        }
+    } 
+
+    a:link {
+        text-decoration: none;
+        color: none;
+    }
+    /*========================================================
+    ===================Main: Carrusel=========================
+    ==========================================================*/
+
+    .page-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .main-container{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        height:590px;
+    }
+    
+    column {
+        width: 90%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-container-main-1, .img-container-main-2, .img-container-main-3, .img-container-main-4{
+        width: 100%;
+        height: 590px;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative; 
+        display:flex;
+        justify-content:center;
+
+        &:hover .effect{
+            opacity:0.6;
+            bottom:0px;
+            cursor: pointer;
+        }
+        &:hover .info-1-main{
+            opacity:1;
+            bottom: 100px;
+            cursor: pointer;
+        }
+    }
+    
+    .img-container-main-1, .img-container-main-2, .img-container-main-3, .img-container-main-4{
+        &:hover .info-2-main{
+            opacity:1;
+            bottom:50px;
+            left: 25px;
+            cursor: pointer;
+        }
+    }
+    .img-container-main-2,  .img-container-main-3{
+        @media (max-width: $mobile-width){
+            display: none;
+        }
+    }
+    .img-container-main-4{
+        @media (max-width: $mobile-width){
+            display: none;
+        }
+    }
+    .img-container-main-2{
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    .img-container-main-3{
+        margin-right: 20px;
+
+    }
+    .main-img{
+        flex-grow: 1;
+        flex-basis: 30%;
+        height: 590px;
+    }
+
+    .effect{
+        width: 100%;
+        height: 140px;
+        bottom: -100px;
+        left: 0px;
+        background-color: $main-color;
+        position: absolute;
+        opacity: 0;
+        transition: 0.7s;
+        @media (max-width: $mobile-width){
+            height:0px;
+        }
+    }
+
+    .info-1-main, .info-2-main{
+        color: $sixth-color;
+        font-family: $main-font;
+        position: absolute;
+        opacity: 0;
+        transition: 0.7s;
+        @media (max-width: $mobile-width){
+            display:none;
+        }
+        
+    }
+    .info-1-main{
+        bottom:0px;
+    }
+    .info-2-main{
+        bottom:0px;
+    }
+    
+    /*===========================================================
+    ===========Sections: Platos, Recetas, Exóticos=================
+    =============================================================*/
+
+    .sections{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        margin: 20px 0;
+        @media (max-width: $mobile-width-2){
+            flex-direction: column;
+        }
+        @media (max-width: $mobile-width){
+            flex-direction: column;
+        }
+    }
+    
+    .container-sections-img-1, .container-sections-img-2, .container-sections-img-3 {
+        display: flex;
+        flex-basis: 280px;
+        flex-grow: 1;
+        position: relative;
+
+        &:hover .title-section-recipe{
+            background-color: $main-color;
+            cursor:pointer;
+        }
+    }
+    .container-sections-img-1, .container-sections-img-2{
+        @media (max-width: $mobile-width){
+            height: 300px;
+            flex-basis:220px;
+        }
+    }
+
+    .container-sections-img-3{
+        @media (max-width: $mobile-width){
+            display: none;
+        }
+    }
+
+    .images-sections{
+        width: 95%;
+        max-width: 350px;
+        height: 200px;
+        border-radius: 15%;
+        margin: 10px;
+    }
+
+    .title-section-recipe{
+        width: 44%;
+        height:40px;
+        background-color: $seventh-color;
+        color: $forth-color;
+        font-family: $main-font;
+        font-size:16px;
+        font-weight: bold;
+        text-align: center;
+        line-height:45px;
+        border-radius: 15px;
+        position:absolute;
+        bottom: 99px;
+        left: 29%;
+        opacity:1;  
+        transition: 0.5s;
+        @media (max-width: $mobile-width-2){
+            bottom: 88px;
+            left:80px;
+        }
+        a {
+            text-decoration: none;
+            color: $forth-color;
+        }
+    }
+    
+    /*=====================================================
+    ======================3.Video============================
+    =======================================================*/
+    .recipes-container {
+        width: 90%;
+    }
+    
+    .video-aside-container{
+        display:flex;
+        margin: 30px 0px 30px 0px;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .video-container{
+        width: 100%;
+        height:500px;
+        display:flex;
+        flex-grow: 1;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
+    }
+    .video{
+        width:100%;
+        height:500px;
+    }
+    .video-epigraph-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 65%;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
+    }
+
+    .video-epigraph{
+        color:$second-color;
+        font-family: $main-font;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    /*==================================================
+    ==================4.Aside===========================
+    ====================================================*/
+    
+    aside{
+        width:30%;
+        height:500px;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items:center;
+        margin: 0;
+        @media (max-width: $mobile-width-2){
+            width: 100%;
+        }
+    }
+
+    .border-aside-top, .border-aside-bottom{
+        height: 45px;
+        width: 100%;   
+        display:flex;
+        align-items: center;
+        background-color:$third-color;
+    }
+
+    .border-aside-bottom{
+        bottom: 0px;
+    }
+
+    .border-aside-content{
+        color: $forth-color;
+        font-family: $main-font;
+        font-weight:bold;
+        margin: auto;
+    }
+
+    .picture-aside{
+        background-image: url("../../img/ratatouille.jpg");
+        background-size: 300px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-position-x: 200px;
+
+        // width:70%;
+        // height: 200px;
+        // display:flex;
+        // justify-content: center;
+        // border-radius: 200px;
+        // top: 45px;
+        // left: 30px;
+    }
+
+    .name-aside{
+        color:$forth-color;
+        font-family: $main-font;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .description-aside{
+        color:$forth-color;
+        font-family: $main-font;
+        font-weight: bold;
+        font-size: 14px;
+        padding-left:5px;
+    }
+
+     /*===================================================
+    =====================5.Recetas========================
+    =====================================================*/
+    .recepies-container{
+        display:flex;
+        flex-grow:2;
+        flex-direction: column;
+        
+    }
+    
+    .recipe-container{
+        display:flex;
+        width:60%;
+        flex-basis: 500px;
+        border-top: 0.5px solid $fifth-color;
+
+        a{
+            color:$forth-color;
+            font-family: $main-font;
+        }
+
+        @media (max-width: $mobile-width){
+            width: 100%;
+        }
+
+        @media (max-width: $mobile-width-2){
+            border-top: 0px;
+            margin: 0 auto;
+        }
+    }
+    
+    .recipe-content-1, .recipe-content-2{
+        display:flex;
+        flex-direction: column;
+        margin:20px;
+
+        button{
+            margin:15px;
+        }
+    }
+    .recipe-content-2{
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
+    }
+    
+    .authors-recipe{
+        font-family:$main-font;
+        font-size: 12px;
+        color: $second-color;
+    }
+
+    .title-recipe{
+        font-family:$main-font;
+        font-size:20px;
+        padding-left:20px;
+    }
+    
+    .description-recipe{
+        font-family:$main-font;
+        font-size: 14px;
+        color: $second-color;
+    }
+    
+    .images-recipes-1{
+        height: 150px;
+        border-radius: 15%;
+        margin: 30px 20px 20px 0px;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
+    }
+    
+    .images-recipes-2{
+        width: 230px;
+        height: 154px;
+        border-radius: 15%;
+        margin: 30px 20px 20px 2px;
+        @media (max-width: $mobile-width-2){
+            display:none;
+        }
+    }   
+ }

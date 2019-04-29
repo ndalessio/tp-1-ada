@@ -1,21 +1,22 @@
 
+/*HEADER*/
+
 header {
     width: 50%;
     @media (max-width: $mobile-width){
         width: 70%;
     }
-
+    @media (max-width: $menu-width) {
+        width: 85%;
+    }
     h1 {
         color: $main-color;
         font-family: $title-font;
         font-size: 50px;
         text-align: center;
         margin: 20px 0 25px 0;
-        @media (max-width: 1000px){
-            font-size: 60px;
-        }
         @media (max-width: $mobile-width){
-            font-size: 80px;
+            font-size: 60px;
         }
     } 
     

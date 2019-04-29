@@ -6,8 +6,162 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../styles/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="styles/css/main.css" />
 </head>
+
+<body>
+    <div id="home">
+        <header>
+            <h1>Mi Blog de Cocina</h1>
+            <nav>
+                <ul class="menu">
+                    <li class="titulo-desplegable"><i class="fas fa-bars"></i><span>MENU</span>
+                        <ul class="links-principales">
+                            <li class="links"><a href="index.html#home">HOME</a></li>
+                            <li class="links"><a href="#">PLATOS<i class="fas fa-sort-down"></i></a>
+                                <ul class="submenu-container">
+                                    <li class="sub-links"><a href="pages html/receta.html">Ensalada</a></li>
+                                    <li class="sub-links">Carne</li>
+                                    <li class="sub-links">Helado</li>
+                                </ul>
+                            </li>
+                            <li class="links"><a href="#">SOBRE MI</a></li>
+                            <li class="links"><a href="#">CONTACTOS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="page-container">
+            <div class="main-container">
+                <div class="main">
+                    <!----------------------1. Main: Carrusel-------------------------------->
+                    <div class="img-container-main-1">
+                        <a href="pages html/receta.html"><img class="main-img" src="img/img-1.jpg"></a>
+                        <div class="effect"></div>
+                        <div class="info-1-main">21 de Abril, 2019</div>
+                        <div class="info-2-main">Aprendé a hacer los mejores tacos!</div>
+                    </div>
+                    <div class="img-container-main-2">
+                        <img class="main-img" src="img/img-2.jpg">
+                        <div class="effect"></div>
+                        <div class="info-1-main">10 de Marzo, 2019</div>
+                        <div class="info-2-main">Pollo con salsa de soja: gourmet y fácil</div>
+                    </div>
+                    <div class="img-container-main-3">
+                        <img class="main-img" src="img/img-3.jpg">
+                        <div class="effect"></div>
+                        <div class="info-1-main">5 de Marzo, 2019</div>
+                        <div class="info-2-main">Un desayuno delicioso y saludable</div>
+                    </div>
+                    <div class="img-container-main-4">
+                        <img class="main-img" src="img/img-4.jpg">
+                        <div class="effect"></div>
+                        <div class="info-1-main">15 de Enero, 2019</div>
+                        <div class="info-2-main">Tostadas para un brunch mediterraneo</div>
+                    </div>
+                </div>
+            </div>
+            <column>
+                <!----------------2. Sections: Platos, Recetas, Exóticos---------------------->
+                <div class="sections">
+                    <div class="container-sections-img-1">
+                        <img class="images-sections" src="img/platos.jpeg" alt>
+                        <div class="title-section-recipe">Platos</div>
+                    </div>
+                    <div class="container-sections-img-2">
+                        <img class="images-sections" src="img/receta.JPG" alt>
+                        <div class="title-section-recipe"><a href="pages html/receta.html">Recetas</a></div>
+                    </div>
+                    <div class="container-sections-img-3">
+                        <img class="images-sections" src="img/exoticos.JPG" alt>
+                        <div class="title-section-recipe">Exóticos</div>
+                    </div>
+                </div>
+
+                <!----------------------------------3. Video----------------------------------------->
+                <div class="recipes-container">
+                    <div class="video-aside-container">
+                        <div class="video-epigraph-container">
+                            <div class="video-container">
+                                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/tJmODxtj-Sw"
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="video-epigraph">Cómo preparar una riquísima torta de galletitas</div>
+                        </div>
+                        <!--------------------------------4. Aside-------------------------------------->
+                        <aside>
+                            <div class="border-aside-top">
+                                <div class="border-aside-content">Sobre mí</div>
+                            </div>
+                            <div class="picture-aside">
+                                <!--<img src="img/ratatouille.jpg">-->
+                            </div>
+                            <div class="name-aside">Ratatouille</div>
+                            <div class="description-aside">Tengo 5 años, y me encanta cocinar.<br>Mi lema es "todos
+                                podemos cocinar!"</div>
+                            <div class="border-aside-bottom">
+                                <div class="border-aside-content">Newslatter</div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!--------------------------------5. Recetas -------------------------------------->
+
+                    <div class="recipe-container">
+                        <img class="images-recipes-1" src="img/nota1.JPG">
+                        <div class="recipe-content-1">
+
+                            <h2 class="authors-recipe">By Clara y Noelí | Abril 14, 2019
+                                <a href="#"><i class="far fa-heart"></i></a>
+                                <span class="authors-recipe">45</span>
+                                <a href="#"><i class="fas fa-share-alt"></i></a>
+                                <span class="authors-recipe"> 22 </span>
+                            </h2>
+                            <h1 class="title-recipe">Delicias dulces</h1>
+                            <h2 class="description-recipe">En este artículo encontrarán una receta rica, sana y muy
+                                fácil de hacer!
+                            </h2>
+                            <button><a href="#">Leer más</a></button>
+                        </div>
+                    </div>
+                    <div class="recipe-container">
+                        <img class="images-recipes-2" src="img/nota2.JPG">
+                        <div class="recipe-content-2">
+                            <h2 class="authors-recipe">By Clara y Noelí | Febrero 4, 2019
+                                <a href="#"><i class="far fa-heart"></i></a>
+                                <span class="authors-recipe">45</span>
+                                <a href="#"><i class="fas fa-share-alt"></i></a>
+                                <span class="authors-recipe"> 22 </span>
+                            </h2>
+                            <h1 class="title-recipe">Comidas simples</h1>
+                            <h2 class="description-recipe">En este artículo encontrarán una receta rica, sana y muy
+                                fácil de hacer!
+                            </h2>
+                            <button><a href="#">Leer más</a></button>
+                        </div>
+                    </div>
+                </div>
+            </column>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i><span>FACEBOOK</span></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i><span>TWITTER</span></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i><span>GOOGLE+</span></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i><span>LINKEDIN</span></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i><span>INSTAGRAM</span></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i><span>YOUTUBE</span></a></li>
+            </ul>
+            <div class="flecha-footer">
+                <a href="index.html#home"><i class="fas fa-arrow-circle-up"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
 
 </html>
